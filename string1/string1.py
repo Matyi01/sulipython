@@ -1,10 +1,8 @@
 nev = input("Kérek egy nevet: ")
-
+mgh = "ö","ü","ó","ő","ú","é","á","ű","a","e","i","u","o"
 z = ""
-print(z)
-if nev[0] == "A"or"a"or"E"or"e"or"I"or"i"or"O"or"o"or"Í"or"í"or"Ö"or"ö"or"Ü"or"ü"or"Ó"or"ó"or"Ő"or"ő"or"Ú"or"ú"or"Ű"or"ű"or"Á"or"á"or"É"or"é":
+if nev[0].lower() in mgh:
     z += "z"
-print(z)
 
 print("A"+z+" "+nev+" nevet írtad be.")
 
