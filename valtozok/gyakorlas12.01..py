@@ -5,10 +5,15 @@ def oszlopba(munkalista, db):
             print()
     print()
     
-
-lista = [3,1,6,2,7,3,4,9,6,8]
-for i in range(0):
-    lista.append(int(input("Kérek egy számot: ")))
+lista = []
+for i in range(10):
+    szam = ""
+    while szam == "":
+        try:
+            szam = int(input("Kérek egy számot: "))
+            lista.append(szam)
+        except:
+            print("Ez nem egy szám.")
 print(lista)
 
 for i in range(len(lista)):
@@ -17,7 +22,12 @@ for i in range(len(lista)):
         print()
 print()
 
-szamBe = int(input("Kérek egy számot: "))
+szamBe = ""
+while szamBe == "":
+    try:
+        szamBe = int(input("Kérek egy számot: "))
+    except:
+        print("Ez nem egy szám.")
 if szamBe in lista:
     print("Van benne.")
 else:
