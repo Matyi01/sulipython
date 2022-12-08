@@ -10,10 +10,8 @@ for i in range(1000):
     elif h == 4 or h == 6 or h == 9 or h == 11:
         nap = random.randint(1,30)
     else:
-        if ev % 4 == 0:
+        if ev % 4 == 0 and ev % 400 == 0:
             nap = random.randint(1,29)
-        if ev == 1900:
-            nap = random.randint(1,28)
         else:
             nap = random.randint(1,28)
     evek.append(ev)
