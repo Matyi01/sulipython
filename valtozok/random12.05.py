@@ -32,6 +32,31 @@ for e in l:
     
 print(l5)
 
-l5 = [e//l5 for e in l if e % 5 == 0]
+l5 = [e for e in l if e % 5 == 0]
 
 print(l5)
+
+
+szavak=["alma","körte","barack","banán","dinnye","szőlő"]
+
+#random.seed(1)
+print(szavak[random.randint(0,len(szavak)-1)])
+
+print(random.choice(szavak))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
