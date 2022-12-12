@@ -5,18 +5,18 @@ ferfi = ["Tamás","Bence","Péter","János","Patrik"]
 no = ["Réka","Anna","Katalin","Hanna","Regina"]
 
 for i in range(100):
-    last2 = ""
-    first = random.choice(vezetek)
+    first2 = ""
+    last = random.choice(vezetek)
     if random.randint(1,2) == 1:
-        last1 = random.choice(ferfi)
+        first1 = random.choice(ferfi)
         if random.randint(1,5) == 1:
-            last2 = random.choice(ferfi)
-            while last1 == last2:
-                last2 = random.choice(ferfi)
+            first2 = random.choice(ferfi)
+            while first1 == first2:
+                first2 = random.choice(ferfi)
     else:
-        last1 = random.choice(no)
+        first1 = random.choice(no)
         if random.randint(1,5) == 1:
-            last2 = random.choice(no)
-            while last1 == last2:
-                last2 = random.choice(no)
-    print(first+" "+last1+" "+last2)
+            first2 = random.choice(no)
+            while first1 == first2:
+                first2 = random.choice(no)
+    print(last+" "+first1+" "+first2)
