@@ -37,20 +37,26 @@ l5 = [e for e in l if e % 5 == 0]
 print(l5)
 
 
-szavak=["alma","körte","barack","banán","dinnye","szőlő"]
+szavak = ["alma","körte","barack","banán","dinnye","szőlő"]
 
 #random.seed(1)
 print(szavak[random.randint(0,len(szavak)-1)])
 
 print(random.choice(szavak))
 
+print("-"*20)
 
+nagylista = []
+for e in szavak:
+    kislista = []
+    kislista.append(e)
+    kislista.append(random.randint(12,312))
+    nagylista.append(kislista)
+print(nagylista)
 
-
-
-
-
-
+for e in nagylista:
+    print(e[0].ljust(10),str(e[1]).rjust(4),"kg")
+    
 
 
 
