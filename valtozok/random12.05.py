@@ -58,6 +58,20 @@ for e in nagylista:
     print(e[0].ljust(10),str(e[1]).rjust(4),"kg","-"*(e[1]//10))
     
 
+minert = int(input("Add meg, hogy hol kezdődjön: "))
+maxert = int(input("Add meg, hogy hol érjen véget: "))
+db = int(input("Add meg, hogy hány értéket generáljon: "))
+
+szamok = []
+
+for i in range(db):
+    szamok.append(random.randint(minert,maxert))
+print(szamok)
+
+legnagyobb = max(szamok)
+egyseg = 80//legnagyobb
+for e in szamok:
+    print("-"*(e*egyseg))
 
 
 
