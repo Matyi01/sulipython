@@ -71,7 +71,26 @@ print(szamok)
 legnagyobb = max(szamok)
 egyseg = 80//legnagyobb
 for e in szamok:
-    print("-"*(e*egyseg))
+    print("-"*math.floor(e*egyseg))
+
+szam = ""
+while len(szam) != 3:
+    szam = input("Kérek egy 3 jagyű számot: ")
+szam = int(szam)
+
+if szam % 12 == 0:
+    print("Osztható")
+print(szam)
+
+szoveg = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec feugiat facilisis magna ac finibus. Nunc sagittis a turpis quis vehicula. Etiam elementum mollis augue. Pellentesque consectetur lorem interdum sollicitudin porttitor. Nulla faucibus lobortis velit vitae pharetra. Praesent commodo sodales facilisis. Aenean tristique libero sed ex ornare, et congue velit luctus. Curabitur pulvinar turpis ac purus congue, ut iaculis dolor fringilla. Morbi in ligula quam. Aenean ipsum turpis, vulputate sit amet pretium sit amet, tempus eu augue."
+
+
+betu = "k"
+print(len(szoveg.split(" ")))
+szoveg2 = szoveg.replace(betu,betu.upper())
+print(szoveg2)
+
+
 
 
 
