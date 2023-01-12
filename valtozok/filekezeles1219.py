@@ -24,3 +24,22 @@ for sor in f:
 print(sorok)
 
 f.close()
+
+#hf:
+
+f = open("proba.txt","w")
+
+x = "a"
+while x != "":
+    x = input("Irj be valamit: ")
+    f.write(x)
+    f.write("\n")
+
+f.close()
+
+f = open("proba.txt","r")
+
+for x in f:
+    print(x.replace("\n",""))
+
+f.close()
