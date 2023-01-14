@@ -20,10 +20,17 @@ def randomDatum():
     datum = str(ev) + ". " + hk[int(h)-1] + ". " + str(nap) + ". "
     return datum
 
+def randomIdo():
+    ora = random.randint(1,23)
+    p = random.randint(1,59)
+    mp = random.randint(1,59)
+    ido = str(ora) + ":" + str(p) + ":" + str(mp)
+    return ido
+
 def fileIras():
     f = open("datumok.txt","w")
     for i in range(10):
-        f.write(randomDatum()+"\n")
+        f.write(randomDatum() + randomIdo() + "\n")
     f.close()
 
 
