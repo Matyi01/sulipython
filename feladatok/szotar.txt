@@ -1,7 +1,7 @@
-a : r
-r : v
-df : t
-fg : v
-er : f
-djhv : d
-asd : c
+guitar : gitar
+desk : asztal
+pencil : ceruza
+mouse : eger
+watch : ora
+phone : telefon
+lamp : lampa
