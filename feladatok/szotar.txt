@@ -1,0 +1,7 @@
+a : r
+r : v
+df : t
+fg : v
+er : f
+djhv : d
+asd : c
