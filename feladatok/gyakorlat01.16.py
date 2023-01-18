@@ -13,19 +13,13 @@ def szoRandom():
     f = open("szotar.txt","r")
 
     full = f.readlines()
+    for i in range(len(full)):
+        full[i] = full[i].split(" : ")
+        full[i][1] = full[i][1].strip("\n")
+        
     x = full[random.randint(1,len(full)-1)]
-    x = x.split(" : ")
-    x[1] = x[1].strip("\n")
-    print("Mit jelent az "+x[0]+" szó?")
-    
-    for e in full:
-        full.remove(e)
-        e = e.split(" : ")
-        e[1] = e[1].strip("\n")
-        
-        
-        
-    
+    print(x[0] + " szó?")
+
     f.close()
 
 szoRandom()
