@@ -1,7 +1,11 @@
-guitar : gitar
-desk : asztal
-pencil : ceruza
-mouse : eger
-watch : ora
-phone : telefon
-lamp : lampa
+guitar : gitar : 2023-01-17
+desk : asztal : 2023-01-17
+pencil : ceruza : 2023-01-17
+mouse : eger : 2023-01-18
+watch : ora : 2023-01-18
+phone : telefon : 2023-01-18
+lamp : lampa : 2023-01-19
+head : fej : 2023-01-19
+keyboard : billentyuzet : 2023-01-19
+book : konyv : 2023-01-19
+chair : szek : 2023-01-19

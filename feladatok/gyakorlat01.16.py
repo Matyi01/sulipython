@@ -1,4 +1,5 @@
 import random
+import datetime
 
 def szoBe():
     x = "a"
@@ -10,8 +11,11 @@ def szoBe():
             y = ""
         else:
             y = input("kérem a jelentését:")
+
+        ido = datetime.date.today()
+        
         if x != "":
-            f.write(str(x)+" : "+str(y)+"\n")
+            f.write(str(x)+" : "+str(y)+" : "+str(ido)+"\n")
         
         f.close()
 
