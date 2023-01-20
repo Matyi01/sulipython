@@ -27,8 +27,18 @@ def szoRandom():
         full[i] = full[i].split(" : ")
         full[i][1] = full[i][1].strip("\n")
 
+    ido = input("mettől szeretnéd a szavakat? (YYYY-MM-DD): ")
+
+    for i in range(len(full)):
+        if str(full[i][2]) == str(ido):
+            print(full[i][2])
+        
+    
     b = "a"
     while b != "":
+
+
+            
         x = full[random.randint(0,len(full)-1)]
         
         print(x[0] + " szó jelentése?")
@@ -44,13 +54,16 @@ def szoRandom():
         szo3 = z[1]
         full.remove(z)
 
+        q = full[random.randint(0,len(full)-1)]
+        szo4 = q[1]
+
         full.append(x)
         full.append(y)
         full.append(z)
         
-        szavak = [szo1,szo2,szo3]
+        szavak = [szo1,szo2,szo3,szo4]
         random.shuffle(szavak)
-        print(szavak[0]+", "+szavak[1]+", "+szavak[2])
+        print(szavak[0]+", "+szavak[1]+", "+szavak[2]+", "+szavak[3])
 
         b = input()
         if b == "":
@@ -61,6 +74,7 @@ def szoRandom():
             print("Nem jo...")
 
     f.close()
+
 
 szoBe()
 szoRandom()
