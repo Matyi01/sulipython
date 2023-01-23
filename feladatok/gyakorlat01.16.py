@@ -6,11 +6,11 @@ def szoBe():
     while x != "":
         f = open("szotar.txt","a")
 
-        x = input("kérek egy szót:")
+        x = input("kérek egy szót: ")
         if x == "":
             y = ""
         else:
-            y = input("kérem a jelentését:")
+            y = input("kérem a jelentését: ")
 
         ido = datetime.date.today()
         
@@ -25,41 +25,41 @@ def szoRandom():
     full = f.readlines()
     for i in range(len(full)):
         full[i] = full[i].split(" : ")
-        full[i][1] = full[i][1].strip("\n")
+        full[i][2] = full[i][2].strip("\n")
 
     ido = input("mettől szeretnéd a szavakat? (YYYY-MM-DD): ")
 
     for i in range(len(full)):
         if str(full[i][2]) == str(ido):
-            print(full[i][2])
-        
+            ido = i
+    print(ido)
+
     
     b = "a"
     while b != "":
 
-
+        print(full[4],full[5],full[6],full[7])
             
-        x = full[random.randint(0,len(full)-1)]
+        x = full[random.randint(ido,len(full)-1)]
+        szo1 = x[1]
         
         print(x[0] + " szó jelentése?")
-        
-        szo1 = x[1]
-        full.remove(x)
-        
-        y = full[random.randint(0,len(full)-1)]
-        szo2 = y[1]
-        full.remove(y)
-        
-        z = full[random.randint(0,len(full)-1)]
-        szo3 = z[1]
-        full.remove(z)
 
-        q = full[random.randint(0,len(full)-1)]
+#while y == x:
+        y = full[random.randint(ido,len(full)-1)]
+
+        szo2 = y[1]
+
+        
+        z = full[random.randint(ido,len(full)-1)]
+
+        szo3 = z[1]
+
+
+        q = full[random.randint(ido,len(full)-1)]
         szo4 = q[1]
 
-        full.append(x)
-        full.append(y)
-        full.append(z)
+
         
         szavak = [szo1,szo2,szo3,szo4]
         random.shuffle(szavak)
