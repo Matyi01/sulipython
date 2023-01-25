@@ -38,7 +38,7 @@ def szoRandom():
 #elso elem keresese a listaban amiben megvan a bekert ido
     for i in range(len(full)):
         if str(full[i][2]) == str(idomin):
-            idomin = i
+            idomin = int(i)
 
 #bekeri hogy milyen ido legyen a lenagyobb ameddig kerdezi
     idomax = input("meddig szeretnéd a szavakat? (YYYY-MM-DD): ")
@@ -46,7 +46,7 @@ def szoRandom():
 #elso elem keresese hatulrol a listaban amiben megvan a bekert ido
     for i in reversed(range(len(full))):
         if str(full[i][2]) == str(idomax):
-            idomax = i
+            idomax = int(i)
 
 #jo es rossz valaszok szamanak valtozoi
     jo = 0
@@ -57,31 +57,19 @@ def szoRandom():
     while b != "":
 #szo generalasa amit kerdez
         x = full[random.randint(idomin,idomax)]
-        szo1 = x[1]
 
 #megkerdezi a generalt szo jelenteset
         print(x[0] + " szó jelentése?")
 
-#meg harom szavat general amik nem jo valaszok es nem ugyanazon szavak mint az elozoek
-        y = full[random.randint(idomin,idomax)]
-        while y == x:
-            y = full[random.randint(idomin,idomax)]
+#ciklus ami harom kulonbozo rossz szot general es listaba rakja
+        szavak = [x[1]]
+        for i in range(3):
+            y = full[random.randint(idomin,idomax)][1]
+            while y in szavak:
+                y = full[random.randint(idomin,idomax)][1]
+            szavak.append(y)
 
-        szo2 = y[1]
-
-        z = full[random.randint(idomin,idomax)]
-        while z == x or z == y:
-            z = full[random.randint(idomin,idomax)]
-
-        szo3 = z[1]
-        
-        q = full[random.randint(idomin,idomax)]
-        while q == x or q == y or q == z:
-            q = full[random.randint(idomin,idomax)]
-        szo4 = q[1]
-
-#generalt szavak listaba rakasa es keverese
-        szavak = [szo1,szo2,szo3,szo4]
+#az elobb generalt lista elemeit osszekeveri es elemenkent kiiratja
         random.shuffle(szavak)
         print(szavak[0]+", "+szavak[1]+", "+szavak[2]+", "+szavak[3])
         

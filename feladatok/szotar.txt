@@ -11,3 +11,4 @@ keyboard : billentyuzet : 2023-01-18
 book : konyv : 2023-01-19
 chair : szek : 2023-01-19
 glass : uveg : 2023-01-24
+apple : alma : 2023-01-25
