@@ -12,3 +12,14 @@ book : konyv : 2023-01-19
 chair : szek : 2023-01-19
 glass : uveg : 2023-01-24
 apple : alma : 2023-01-25
+ball : labda : 2023-01-26
+cable : kabel : 2023-01-26
+note : jegyzet : 2023-01-27
+mushroom : gomba : 2023-01-27
+garage : garazs : 2023-01-29
+garden : kert : 2023-01-29
+baggy : bo : 2023-02-01
+door : ajto : 2023-02-01
+window : ablak : 2023-02-02
+spoon : kanal : 2023-02-03
+knife : kes : 2023-02-03

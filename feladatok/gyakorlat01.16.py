@@ -43,6 +43,15 @@ def szoRandom():
 #bekeri hogy milyen ido legyen a lenagyobb ameddig kerdezi
     idomax = input("meddig szeretnéd a szavakat? (YYYY-MM-DD): ")
 
+#nehezsegi szint bekerese
+    szint = input("milyen nehez legyen? (easy, medium, hard): ")
+    if szint == "easy":
+        szint = 1
+    elif szint == "medium":
+        szint = 3
+    elif szint == "hard":
+        szint = 5
+
 #elso elem keresese hatulrol a listaban amiben megvan a bekert ido
     for i in reversed(range(len(full))):
         if str(full[i][2]) == str(idomax):
@@ -63,7 +72,7 @@ def szoRandom():
 
 #ciklus ami harom kulonbozo rossz szot general es listaba rakja
         szavak = [x[1]]
-        for i in range(3):
+        for i in range(szint):
             y = full[random.randint(idomin,idomax)][1]
             while y in szavak:
                 y = full[random.randint(idomin,idomax)][1]
@@ -71,7 +80,11 @@ def szoRandom():
 
 #az elobb generalt lista elemeit osszekeveri es elemenkent kiiratja
         random.shuffle(szavak)
-        print(szavak[0]+", "+szavak[1]+", "+szavak[2]+", "+szavak[3])
+        for i in range(len(szavak)):
+            print(szavak[i]+"\t",end="")
+            if i%4 == 0:
+                print()
+            print()
         
 #bekeri a szo jelenteset es megnezi hogy jo e
         b = input()
