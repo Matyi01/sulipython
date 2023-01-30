@@ -22,6 +22,7 @@ def szoBe():
             f.write(str(x)+" : "+str(y)+" : "+str(ido)+"\n")
         
         f.close()
+    menu()
 
 def szoRandom():
     f = open("szotar.txt","r")
@@ -84,7 +85,7 @@ def szoRandom():
             print(szavak[i]+"\t",end="")
             if i%4 == 0:
                 print()
-            print()
+        print()
         
 #bekeri a szo jelenteset es megnezi hogy jo e
         b = input()
@@ -103,7 +104,22 @@ def szoRandom():
     
     print("az eredmenyed: "+str(round(szazalek,2))+"%")
     f.close()
+    
+    menu()
 
 
-szoBe()
-szoRandom()
+def menu():
+    print("O"+"-"*18+"O")
+    print("| 1: szohozzadas   |")
+    print("| 2: feleltetés    |")
+    print("| 0: kilepes       |")
+    print("O"+"-"*18+"O")
+    szam = input()
+    if szam == "1":
+        szoBe()
+    elif szam == "2":
+        szoRandom()
+    elif szam == "0":
+        print("szep napot")
+
+menu()
