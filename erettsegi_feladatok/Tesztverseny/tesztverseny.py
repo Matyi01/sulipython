@@ -75,9 +75,15 @@ f.close()
 csakpontok = set({})
 for e in eredmenyek:
     csakpontok.add(e[0])
-print(list(csakpontok)[-3:])
+top3 = list(csakpontok)[-3:]
+top3.sort()
+top3.reverse()
 
-
+for sorszam, i in enumerate(top3):
+    for e in eredmenyek:
+        if e[0] == i:
+            print("{}. díj ({} pont): {}".format(sorszam,i,e[1]))
+        
 
 
 
