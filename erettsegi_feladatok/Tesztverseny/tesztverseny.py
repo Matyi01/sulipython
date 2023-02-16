@@ -82,7 +82,7 @@ top3.reverse()
 for sorszam, i in enumerate(top3):
     for e in eredmenyek:
         if e[0] == i:
-            print("{}. díj ({} pont): {}".format(sorszam,i,e[1]))
+            print("{}. díj ({} pont): {}".format(sorszam+1,i,e[1]))
         
 
 
