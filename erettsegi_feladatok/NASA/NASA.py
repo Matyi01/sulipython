@@ -34,6 +34,8 @@ for e in naplo:
 
 print("8. feladat: Domain-es kérések: {:.2%}".format(domaine.count(True) / len(domaine)))
 
+
+print("9. feladat: Statisztika:")
 hibakodok = []
 for e in naplo:
     if e[3] not in hibakodok:
@@ -44,6 +46,6 @@ for e in hibakodok:
     for o in naplo:
         if o[3] == e:
             temp.append(e)
-    print(len(temp))
+    print("\t{}: {} db".format(e,len(temp)))
 
 
