@@ -10,7 +10,7 @@ win.geometry("900x300")
 # Create a canvas widget
 canvas=Canvas(win, width=900, height=300)
 canvas.configure(bg="lightgray")
-canvas.pack()
+canvas.pack(fill = BOTH, expand = 1)
 
 # Add a line in canvas widget
 M = [10,10,30,10,90,60,150,10,170,10,170,170,150,170,150,30,90,80,30,30,30,170,10,170,10,10]
@@ -20,11 +20,11 @@ T = [350,10,510,10,510,30,440,30,440,170,420,170,420,30,350,30,350,10]
 Y = [520,10,540,10,610,70,680,10,700,10,620,82,620,170,600,170,600,82,520,10]
 I = [710,10,730,10,730,170,710,170,710,10]
 
-canvas.create_line(M, fill="red", width=5)
-canvas.create_line(A1, fill="blue", width=5)
-canvas.create_line(A2, fill="blue", width=5)
-canvas.create_line(T, fill="green", width=5)
-canvas.create_line(Y, fill="yellow", width=5)
+canvas.create_line(M, fill="black", width=5)
+canvas.create_line(A1, fill="black", width=5)
+canvas.create_line(A2, fill="black", width=5)
+canvas.create_line(T, fill="black", width=5)
+canvas.create_line(Y, fill="black", width=5)
 canvas.create_line(I, fill="black", width=5)
 
 win.mainloop()
