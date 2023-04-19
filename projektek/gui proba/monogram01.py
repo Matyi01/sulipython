@@ -2,25 +2,6 @@
 from tkinter import *
 import math
 
-class forgato:
-    canvas = 0
-    vonalak = []
-    def __init__(self,canvas,vonalak):
-        self.canvas = canvas
-        self.vonalak = vonalak
-    def rajzol(self):
-        canvas.delete("all")
-        #szog += 0.1
-        for i,betu in enumerate(self.vonalak):
-            betu = nagyit(betu,0.7)
-            betu = eltol(betu,-kozep[0],-kozep[1])
-            betu = forgat(betu,szog)
-            betu = eltol(betu,kozep[0],kozep[1])
-            betu = eltol(betu,400,400)
-            self.canvas.create_line(betu, fill="black", width=5)
-
-
-
 def eltol(pontok, x, y):
     vissza = []
     for e, pont in enumerate(pontok):
@@ -79,9 +60,6 @@ MATYI = [#M
         #I
         [710,10,730,10,730,170,710,170,710,10]]
 
-elso = forgato(canvas,MATYI)
-
-
 kozep = [0, 0]
 db = 0
 for betu in MATYI:
@@ -95,8 +73,16 @@ kozep[1] /= db
 
 szog = 0
 while True:
-    elso.rajzol()
-    win.update_idletasks()
-    win.update()
+    canvas.delete("all")
+    szog += 0.1
+    for i,betu in enumerate(MATYI):
+        betu = nagyit(betu,0.7)
+        betu = eltol(betu,-kozep[0],-kozep[1])
+        betu = forgat(betu,szog)
+        betu = eltol(betu,kozep[0],kozep[1])
+        betu = eltol(betu,400,400)
+        canvas.create_line(betu, fill="black", width=5)
+        win.update_idletasks()
+        win.update()
     #win.mainloop()
     
