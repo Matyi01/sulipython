@@ -6,7 +6,7 @@ class forgato:
     canvas=0
     vonalak=[]
     szog=0
-    szogSebesseg=1
+    szogSebesseg=0.1
     szinek=[]
     
     def __init__(self,canvas,vonalak):
@@ -28,6 +28,21 @@ class forgato:
             
             self.canvas.create_line(betu,fill=self.szinek[i],width=5)
 
+    def rajzol2(self):
+        canvas.delete("all")
+        self.szog+=self.szogSebesseg
+
+        self.vonalak[0] = self.eltol(self.vonalak[0], 0, 0)
+        self.vonalak[1] = self.eltol(self.vonalak[1], 900, 0)
+        self.vonalak[2] = self.eltol(self.vonalak[2], 900, 0)
+        self.vonalak[3] = self.eltol(self.vonalak[3], -330, 750)
+        self.vonalak[4] = self.eltol(self.vonalak[4], -330, 750)
+        self.vonalak[5] = self.eltol(self.vonalak[5], 500, 750)
+        for betu in self.vonalak:
+            self.canvas.create_line(betu,fill="red",width=5)
+            
+            
+        
 
     def eltol(self,pontok,x,y):
         vissza=[]
@@ -63,7 +78,7 @@ class forgato:
     def kozepSzamol(self):
         self.kozep=[0,0]
         db=0
-        for betu in AKOS:
+        for betu in MATYI:
             xK=betu[::2]
             yK=betu[1::2]
             self.kozep[0]+=sum(xK)
@@ -93,23 +108,34 @@ AKOS=[[0,375,125,125,250,375,175,375,150,300,100,300,75,375,0,375,],
       [550,175,700,175,700,325,550,325,550,175,],
       [1000,125,750,125,750,249,936,249,936,311,750,311,750,375,1000,375,1000,210,812,210,810,160,1000,160,1000,125,]]
 
+MATYI = [#M
+        [10,10,30,10,90,60,150,10,170,10,170,170,150,170,150,30,90,80,30,30,30,170,10,170,10,10],
+        #A
+        [180,170,200,170,220,130,300,130,320,170,340,170,270,10,250,10,180,170],
+        [230,110,290,110,260,30,230,110],
+        #T
+        [350,10,510,10,510,30,440,30,440,170,420,170,420,30,350,30,350,10],
+        #Y
+        [520,10,540,10,610,70,680,10,700,10,620,82,620,170,600,170,600,82,520,10],
+        #I
+        [710,10,730,10,730,170,710,170,710,10]]
 
 
-
-elso=forgato(canvas,AKOS)
-elso.szinek=["red","red","red","red","red","red","red"]
+elso=forgato(canvas,MATYI)
+elso.szinek=["red","blue","blue","green","yellow","red",]
 
 
 szog=0
 
-
+"""
 while True:
     elso.rajzol()
     win.update_idletasks()
     win.update()
-
+"""
+elso.rajzol2()
         
-    #win.mainloop()
+win.mainloop()
 
 
 
