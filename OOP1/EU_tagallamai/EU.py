@@ -31,7 +31,7 @@ for e in adatok:
 
 majus = False
 for e in adatok:
-    if e.ev[6:7] == "5":
+    if e.ev[5:7] == "05":
         majus = True
 if majus:
     print("6. feladat: Májusban volt csatlakozás!")
