@@ -1,0 +1,5 @@
+Kovács István;30
+Horvát Zoltán;20
+Jankovics Péter;8
+Holczer Mátyás;9
+Szakács Olivér;2
